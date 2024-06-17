@@ -3,7 +3,7 @@
 
 Here is a screenshot of the page:
 ![portfolioscreenshot](https://github.com/BenJR546/portfolio/assets/162855613/18f38018-41e4-4187-8578-bff3468562b4)
-
+https://benjr546.github.io/portfolio/
 ## Usage
 
 - This page is very easily navigated, with the links in the navbar taking you to that section of the page.
