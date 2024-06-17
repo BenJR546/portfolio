@@ -1,0 +1,155 @@
+/* Define CSS vaairables for color*/
+:root {
+    --navbar-background-color: #262626;
+    ---navbar-text-color: #fff;
+    --nav-link-hover-bg-color: dodgerblue;
+    --hamburger-bar-color: rgb(100, 100, 100);
+}
+/* Reset default styling of all elements */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Styling the header */
+header {
+    background-color: var(--navbar-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+/* Remove dot points for navigation items */
+header li {
+    list-style: none;
+}
+/* Nav links styling */
+nav a {
+    color: var(---navbar-text-color);
+    text-decoration: none;
+}
+/* Navbar styling */
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+/* Nav menu styling */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+/* Nav menu text styling */
+.nav-text {
+    font-size: 2rem;
+}
+/* Transition for nav links */
+.nav-link {
+    transition: 0.7s ease;
+}
+/* Change color when hovering over nav links */
+.nav-link:hover {
+    color: var(--nav-link-hover-bg-color);
+
+}
+/* Stying for hamburger menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;        /* Forming the "bars" of the hamburger menu. This is a slightly modified layout from  "https://www.w3schools.com/howto/howto_css_menu_icon.asp"*/
+    height: 3px;        /*I'll be adding animation, but the one from the linked page doesn't quite look right so I'll be trying a few things with that */
+    margin: 5px auto;
+    background-color: var(--hamburger-bar-color);
+}
+/* sections styling */
+section {
+    padding-top: 100px;
+    color: white;
+    background-color: var(--navbar-background-color);
+}
+/* section heading styling */
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+/*  section text styling */
+section p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+/* styling for section lists (likely placeholders) */
+section ul{
+    text-align: center;
+    text-decoration: none;
+}
+/* Styling for project images article */
+.projectArticle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+/* styling for project images */
+.projectArticle img {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+}
+/* When screen with is 768px or less: */
+@media screen and (max-width: 768px) {
+   /* Show hamburger menu */
+    .hamburger {
+        display: block;
+    }
+     
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /*The above section of code will hide the second bar and move rotate the other two by 45°, making the "X" when it is given the class "active" by js.*/
+    
+    /* Re-syle the nav-bar menu for the hamburger menu */
+    .nav-menu {
+        display: flex;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3;
+        align-items: center;
+    }
+    /* Show the nav menu when it has the class "active" */
+    .nav-menu.active{
+        left: 0;
+    }
+    /* Adjust the grid in smaller viewports */
+    .projectArticle {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 50%;
+    }
+    /* Adjust the image layout in smaller viewports */
+    .projectArticle img {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        
+    }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/CSS/style.css" rel="stylesheet" href="">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="nav-text">Benjamin Rice's Portfolio</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section class="content" id="home">
+        <h2>Home (placeholder)</h2>
+            <p>
+                A concise introduction of myself
+            </p>
+            <p>
+                One or two featured projects
+            </p>
+            <p>
+                A skills overview
+            </p>
+            <p>
+                A call to action (some way to encourage further interaction with myself and the portfolio)
+            </p>
+            <p>
+                Professional photo or avatar
+            </p>
+            <p>
+                Brief Bio
+            </p>
+            <p>
+                Social media links <!--I might have social media links as a footer-->
+            <p>
+    </section>
+    <section class="content" id="about">
+        <h2>About (placeholder)</h2>
+            <p>
+                Brief professional introduction
+            </p>
+            <p>
+                Background
+            </p>
+            <p>
+                Skills
+            </p>
+            <p>
+                A brief summary of current projects, linked to the projects section
+            </p>
+            <p>
+                Achievements
+            </p>
+            <p>
+                Professional Goals
+            </p>
+            <p>
+                Contact Information
+            </p>
+    </section>
+    <section class="content" id="projects">
+        <h2>Projects (placeholder)</h2>
+            <p>
+                Descriptions of each project
+            </p>
+            <p>
+                Links to live deployed projects
+            </p>
+            <p> 
+                Project feedback    
+            </p>
+            <p>
+                Screenshots and demos
+            </p>
+            <p>
+                Technologies and skills used (languages, tools, etc)
+            </p>
+            <p>
+                <a href="https://github.com/BenJR546/week1challenge">Project 1 GitHub Repo</a>
+            </p>
+        <article class="projectArticle">
+            <a href="https://benjr546.github.io/week1challenge/" target="_blank">
+                <img class="projectArticleImage" src="/assets/images/200x200 placeholder.png" alt="200x200-1placeholder"> <!--These images will likely also be links to either a GitHub repo or launched site-->
+            </a>
+            <a>
+                <img class="projectArticleImage" src="/assets/images/200x200 placeholder.png" alt="200x200-2placeholder"> 
+            </a>
+            <a>
+                <img class="projectArticleImage" src="/assets/images/200x200 placeholder.png" alt="200x200-3placeholder">
+            </a>
+            <a>
+                <img class="projectArticleImage" src="/assets/images/200x200 placeholder.png" alt="200x200-4placeholder">
+            </a>
+            <a>
+                <img class="projectArticleImage" src="/assets/images/200x200 placeholder.png" alt="200x200-5placeholder">
+            </a>
+            <a>
+                <img class="projectArticleImage" src="/assets/images/200x200 placeholder.png" alt="200x200-6placeholder">
+            </a>
+    </section>
+    <section class="content" id="contact">
+        <h2>Contact</h2>
+        <p>
+            Shoot an email to <a href="mailto:benjr546@gmail.com">benjrice546@gmail.com</a> if you have any further questions, or if you wish to colaborate with me!
+        </p>
+    </section>
+        <!--I don't have much js functionality for this page yet, I'll be transferring this to a seperate .js file when more is added-->
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+//Setting variables to easily select HTML classes ^
+
+hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+});
+//If the element with a class of "hamburger" or "nav-menu" is selected, it will either give or remove the class "active" 
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+}));
+//This will remove the class "active" if a nav link is pressed, removing the drop down "hamburger" menu. 
+//It is a modified version of the W3 schools
+//tutorial, "It is a modified version of: "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js",>
+    </script>
+</body>
+</html>
