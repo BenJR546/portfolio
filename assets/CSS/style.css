@@ -1,8 +1,8 @@
 /* Define CSS vaairables for color*/
 :root {
-    --navbar-background-color: #262626;
+    --navbar-background-color: #3b3838;
     ---navbar-text-color: #fff;
-    --nav-link-hover-bg-color: dodgerblue;
+    --nav-link-hover-bg-color: rgb(0, 37, 0);
     --hamburger-bar-color: rgb(100, 100, 100);
 }
 /* Reset default styling of all elements */
@@ -71,7 +71,7 @@ nav a {
 /* sections styling */
 section {
     padding-top: 100px;
-    color: white;
+    color: var(---navbar-text-color);
     background-color: var(--navbar-background-color);
 }
 /* section heading styling */
@@ -130,7 +130,7 @@ section ul{
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #262626;
+        background-color: #3b3838;
         width: 100%;
         text-align: center;
         transition: 0.3;
